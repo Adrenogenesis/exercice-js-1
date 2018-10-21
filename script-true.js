@@ -11,47 +11,41 @@
       définir le nb de coups en fonction du chiffre choisi 100:10cp 500:20cp
 */
 
+
 var nbAleatoire;
 var nbVisiteur;
 var nbcoup = 0;
-var nbcoupmax = 0;
-//var nbcoup = Math.min(Math.max(parseInt(nbcoup), 1), 5);
 
 nbAleatoire = random();
-// nbcoupmax = nbcoupmaxfn();
-nbcoupmax = parseInt(prompt("Entrez nb coups"));
-//   function nbcoupmaxfn() {
-//       nbcoupmax = parseInt(prompt("Entrez nb coups"));
-//        if (nbcoup === nbcoupmax) {
-//              break;
-//         }
-//         else {
-//          return "continue";
-//         }
-//       }
+
+// for(nbcoup=0; nbcoup <= 5; nbcoup++){
+//       console.log("5 coups max ");
+// }
     
 
-
  while(nbVisiteur != nbAleatoire) {
-      // nbcoupmax = parseInt(prompt("Entrez nb coups"));
+       
        nbcoup++;
        console.log("nb de coup",nbcoup);
-     
       nbVisiteur = parseInt(prompt("Entrez un chiffre max"));
-       if (nbcoup === nbcoupmax) {
-             break;
-        }
-       else if (nbVisiteur < nbAleatoire){ 
-             console.log("C'est plus ");
-         }
-        else if (nbVisiteur > nbAleatoire){ 
+      if (nbVisiteur < nbAleatoire){ 
+            console.log("C'est plus ");
+     }
+     else if (nbVisiteur > nbAleatoire){ 
            console.log("C'est moins ");
-         }else if (1 <= nbcoup && nbcoup <= 3){
+       }else if (1 <= nbcoup && nbcoup <= 5){
             console.log("C'est très bien ! ");
-
-         } 
-            else{ 
-                  console.log("C'est juste ");
+         
+   }else if (5 <= nbcoup && nbcoup <=10){
+    console.log("C'est bien ! ");
+ 
+}else if (10 <= nbcoup && nbcoup <= 15){
+      
+    console.log("C'est long ! ");
+ 
+}
+     else{ 
+           console.log("C'est juste ");
 
       }
  }
@@ -64,5 +58,3 @@ nbcoupmax = parseInt(prompt("Entrez nb coups"));
      return Math.floor(Math.random() * (max - min + 1) ) + min;
  }
 
-
-   

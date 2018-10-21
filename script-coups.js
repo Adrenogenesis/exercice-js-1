@@ -25,8 +25,7 @@ nbAleatoire = random();
      }
      else if (nbVisiteur > nbAleatoire){ 
            console.log("C'est moins ");
-     }
-     else{ 
+     }else{ 
            console.log("C'est juste ");
       }
  }

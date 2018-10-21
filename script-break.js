@@ -14,34 +14,22 @@
 var nbAleatoire;
 var nbVisiteur;
 var nbcoup = 0;
-var nbcoupmax = 0;
-//var nbcoup = Math.min(Math.max(parseInt(nbcoup), 1), 5);
+// var nbcoup = Math.min(Math.max(parseInt(nbcoup), 1), 5);
 
 nbAleatoire = random();
-// nbcoupmax = nbcoupmaxfn();
-nbcoupmax = parseInt(prompt("Entrez nb coups"));
-//   function nbcoupmaxfn() {
-//       nbcoupmax = parseInt(prompt("Entrez nb coups"));
-//        if (nbcoup === nbcoupmax) {
-//              break;
-//         }
-//         else {
-//          return "continue";
-//         }
-//       }
     
 
-
  while(nbVisiteur != nbAleatoire) {
-      // nbcoupmax = parseInt(prompt("Entrez nb coups"));
+       
        nbcoup++;
        console.log("nb de coup",nbcoup);
-     
+      
       nbVisiteur = parseInt(prompt("Entrez un chiffre max"));
-       if (nbcoup === nbcoupmax) {
-             break;
-        }
-       else if (nbVisiteur < nbAleatoire){ 
+      if (nbcoup === 5) {
+            break;
+       }
+
+        else if (nbVisiteur < nbAleatoire){ 
              console.log("C'est plus ");
          }
         else if (nbVisiteur > nbAleatoire){ 
